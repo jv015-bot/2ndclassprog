@@ -31,9 +31,14 @@ class Main {
 
                 //case c: exit program
                 case 'c':
-                    System.out.println("Exiting program.");
+                    System.out.println("You entered 'c'. Exiting program.");
                     break;
-            }
+
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+
+                }   
+
             // add another call to displayMenu
             choice = displayMenu(scanner);
         }  
