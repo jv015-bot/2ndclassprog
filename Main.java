@@ -128,6 +128,11 @@ class Main {
         //get scanner input (similar to above)
         String input = scanner.nextLine().trim();
 
+        // validate before parsing so letters like "a" or "123abc" are rejected cleanly
+        if (!isDigits(input) || Integer.parseInt(input) < 0 ){
+            return -1;
+        }
+
         //this line converts the input string to an integer
         int decimal = Integer.parseInt(input);
  
